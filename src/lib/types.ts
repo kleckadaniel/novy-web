@@ -24,9 +24,11 @@ export interface Testimonial {
 export interface ContentData {
   hero: {
     tagline: string;
-    headline: string;
+    headlineStatic: string;
+    rotatingWords: string[];
     subtext: string;
     cta: string;
+    secondaryCta: string;
   };
   services: {
     headline: string;

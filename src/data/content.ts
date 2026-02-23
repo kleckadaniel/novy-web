@@ -3,10 +3,17 @@ import type { ContentData } from "@/lib/types";
 const content: ContentData = {
   hero: {
     tagline: "Daniel Klečka — Idea Maker",
-    headline: "Vše začíná\nsprávným nápadem.",
-    subtext:
-      "Pomáhám firmám a zakladatelům projektů komunikovat tak, aby to zaujalo a zafungovalo. Od strategie po konkrétní výstupy — vše začíná u jedné silné myšlenky.",
+    headlineStatic: "Skvělý nápad vás dělí od",
+    rotatingWords: [
+      "úspěšné kampaně",
+      "virálního videa",
+      "zapamatovatelného názvu",
+      "obsahu, co funguje",
+      "značky, která je vidět",
+    ],
+    subtext: "Špatné nápady jsou drahé. Ty dobré dokážou změnit hru.",
     cta: "Pojďme spolupracovat",
+    secondaryCta: "Nápady v praxi",
   },
 
   services: {
