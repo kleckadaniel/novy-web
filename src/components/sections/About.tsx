@@ -6,21 +6,21 @@ interface AboutProps {
 
 export default function About({ data }: AboutProps) {
   return (
-    <section id="about" className="section-padding bg-[#f7f5f1]">
+    <section id="about" className="section-padding bg-c-bg">
       <div className="container-content">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text column */}
           <div>
-            <h2 className="font-display text-[clamp(2rem,5vw,3rem)] font-normal text-neutral-900 leading-tight mb-8">
+            <h2 className="font-display text-[clamp(2rem,5vw,3rem)] font-normal text-c-text leading-tight mb-8">
               {data.headline}
             </h2>
 
-            <p className="text-base md:text-lg text-neutral-600 leading-relaxed mb-6">
+            <p className="text-base md:text-lg text-c-text-2 leading-relaxed mb-6">
               {data.text}
             </p>
 
-            <div className="border-l-2 border-neutral-300 pl-5">
-              <p className="text-sm text-neutral-500 leading-relaxed italic">
+            <div className="border-l-2 border-c-border pl-5">
+              <p className="text-sm text-c-text-2 leading-relaxed italic">
                 {data.note}
               </p>
             </div>
@@ -28,7 +28,7 @@ export default function About({ data }: AboutProps) {
             <div className="mt-10">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 text-sm font-medium text-neutral-900 underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-900 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-medium text-c-text underline underline-offset-4 decoration-[rgba(15,61,62,0.35)] hover:text-c-accent hover:decoration-c-accent transition-colors"
               >
                 Napište mi
                 <svg
@@ -51,14 +51,14 @@ export default function About({ data }: AboutProps) {
 
           {/* Photo column */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-sm aspect-[3/4] rounded-2xl overflow-hidden bg-neutral-200">
+            <div className="relative w-full max-w-sm aspect-[3/4] rounded-2xl overflow-hidden bg-c-border">
               {/*
                * Replace this placeholder with a real <Image /> component when the photo is ready.
                * Example:
                *   import Image from "next/image";
                *   <Image src="/photos/daniel.jpg" alt="Daniel Klečka" fill className="object-cover" />
                */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-neutral-400">
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-c-text-3">
                 <svg
                   width="40"
                   height="40"

@@ -2,15 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── Theme tokens ─────────────────────────────────────────────── */
+/* ─── Design tokens ─────────────────────────────────────────────── */
 :root {
-  --color-bg: #ffffff;
-  --color-bg-alt: #f7f5f1;
-  --color-bg-dark: #0f0f0f;
-  --color-text: #0f0f0f;
-  --color-text-muted: #737373;
-  --color-border: #e5e5e5;
-  --color-accent: #0f0f0f;
+  /* Light theme */
+  --bg:           #F3F3F1;
+  --surface:      #FFFFFF;
+  --text:         #121212;
+  --text-2:       #5F5F5F;
+  --text-3:       #9A9A9A;
+  --border:       #D6D6D6;
+  --accent:       #0F3D3E;
+
+  /* Dark section (contact / footer only) */
+  --dark-bg:      #0E0E0E;
+  --dark-surface: #141414;
+  --dark-text:    #EDEDED;
+  --dark-text-2:  #9A9A9A;
+  --dark-border:  rgba(255, 255, 255, 0.16);
+
+  /* Semantic button aliases */
+  --btn-primary-bg:  var(--text);
+  --btn-primary-hov: var(--accent);
+  --btn-primary-txt: #FFFFFF;
 }
 
 /* ─── Base reset & typography ──────────────────────────────────── */
@@ -27,8 +40,8 @@ html {
 }
 
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  background-color: var(--bg);
+  color: var(--text);
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   line-height: 1.6;
 }
@@ -41,11 +54,11 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #d4d4d4;
+  background: var(--border);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #a3a3a3;
+  background: var(--text-3);
 }
 
 /* ─── Custom animations ────────────────────────────────────────── */
@@ -135,6 +148,6 @@ body {
 /* ─── Underline accent ─────────────────────────────────────────── */
 .underline-accent {
   text-decoration: underline;
-  text-decoration-color: #d4d4d4;
+  text-decoration-color: var(--border);
   text-underline-offset: 4px;
 }

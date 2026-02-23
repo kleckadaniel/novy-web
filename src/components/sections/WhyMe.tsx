@@ -33,19 +33,19 @@ function WhyMeCard({
   return (
     <div className="group flex flex-col gap-5">
       {/* Icon circle */}
-      <div className="w-11 h-11 rounded-full border border-neutral-200 flex items-center justify-center text-neutral-500 group-hover:border-neutral-400 group-hover:text-neutral-800 transition-all duration-300">
+      <div className="w-11 h-11 rounded-full border border-c-border flex items-center justify-center text-c-text-2 group-hover:border-c-text group-hover:text-c-text transition-all duration-300">
         {icons[index]}
       </div>
 
       {/* Number + Title */}
       <div>
-        <span className="block text-[10px] font-medium tracking-[0.15em] uppercase text-neutral-300 mb-1">
+        <span className="block text-[10px] font-medium tracking-[0.15em] uppercase text-c-text-3 mb-1">
           {String(index + 1).padStart(2, "0")}
         </span>
-        <h3 className="text-lg font-medium text-neutral-900 mb-2">
+        <h3 className="text-lg font-medium text-c-text mb-2">
           {point.title}
         </h3>
-        <p className="text-sm md:text-base text-neutral-500 leading-relaxed">
+        <p className="text-sm md:text-base text-c-text-2 leading-relaxed">
           {point.text}
         </p>
       </div>
@@ -55,14 +55,14 @@ function WhyMeCard({
 
 export default function WhyMe({ data }: WhyMeProps) {
   return (
-    <section id="why-me" className="section-padding bg-white">
+    <section id="why-me" className="section-padding bg-c-surface">
       <div className="container-content">
         {/* Header */}
         <div className="mb-14 md:mb-16 max-w-xl">
-          <h2 className="font-display text-[clamp(2rem,5vw,3rem)] font-normal text-neutral-900 leading-tight mb-4">
+          <h2 className="font-display text-[clamp(2rem,5vw,3rem)] font-normal text-c-text leading-tight mb-4">
             {data.headline}
           </h2>
-          <p className="text-base md:text-lg text-neutral-500 leading-relaxed">
+          <p className="text-base md:text-lg text-c-text-2 leading-relaxed">
             {data.intro}
           </p>
         </div>

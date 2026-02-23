@@ -14,7 +14,7 @@ function SubmitButton({ label }: { label: string }) {
   return (
     <button
       type="submit"
-      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-neutral-900 text-sm font-medium px-8 py-4 rounded-full hover:bg-neutral-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-c-dark-text text-c-dark-bg text-sm font-medium px-8 py-4 rounded-full hover:bg-c-accent hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-c-accent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
     >
       {label}
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -42,23 +42,23 @@ export default function Contact({ data }: ContactProps) {
   }, [state.status]);
 
   const inputClass =
-    "w-full bg-white/5 border border-white/15 rounded-xl px-5 py-4 text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-white/40 transition-colors";
+    "w-full bg-c-dark-surface border border-c-dark-border rounded-xl px-5 py-4 text-sm text-c-dark-text placeholder:text-c-dark-text-2 focus:outline-none focus:border-c-accent transition-colors";
 
   return (
-    <section id="contact" className="section-padding bg-[#0f0f0f]">
+    <section id="contact" className="section-padding bg-c-dark-bg">
       <div className="container-content">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20">
           {/* Left — headline & info */}
           <div className="flex flex-col justify-center">
-            <h2 className="font-display text-[clamp(2.25rem,5vw,3.5rem)] font-normal text-white leading-tight mb-6">
+            <h2 className="font-display text-[clamp(2.25rem,5vw,3.5rem)] font-normal text-c-dark-text leading-tight mb-6">
               {data.headline}
             </h2>
-            <p className="text-base text-neutral-400 leading-relaxed mb-8 max-w-md">
+            <p className="text-base text-c-dark-text-2 leading-relaxed mb-8 max-w-md">
               {data.subtext}
             </p>
             <a
               href={`mailto:${data.email}`}
-              className="inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white transition-colors underline underline-offset-4 decoration-neutral-600 hover:decoration-neutral-300"
+              className="inline-flex items-center gap-2 text-sm text-c-dark-text hover:text-c-dark-text transition-colors underline underline-offset-4 decoration-[rgba(237,237,237,0.3)] hover:decoration-c-dark-text"
             >
               <svg
                 width="14"
@@ -81,7 +81,7 @@ export default function Contact({ data }: ContactProps) {
           <div>
             {state.status === "success" ? (
               <div className="flex flex-col items-start gap-4 py-8">
-                <div className="w-10 h-10 rounded-full border border-neutral-600 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full border border-c-dark-border flex items-center justify-center">
                   <svg
                     width="18"
                     height="18"
@@ -91,18 +91,18 @@ export default function Contact({ data }: ContactProps) {
                     strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-neutral-300"
+                    className="text-c-dark-text"
                   >
                     <path d="M20 6 9 17l-5-5" />
                   </svg>
                 </div>
-                <p className="text-white text-base font-medium">{state.message}</p>
+                <p className="text-c-dark-text text-base font-medium">{state.message}</p>
                 <button
                   onClick={() =>
                     // reset state by re-submitting a blank action — simplest approach
                     formRef.current?.reset()
                   }
-                  className="text-sm text-neutral-500 hover:text-neutral-300 underline underline-offset-4 transition-colors"
+                  className="text-sm text-c-dark-text-2 hover:text-c-dark-text underline underline-offset-4 transition-colors"
                 >
                   Odeslat další zprávu
                 </button>
@@ -158,7 +158,7 @@ export default function Contact({ data }: ContactProps) {
 
                 <div className="flex items-center justify-between gap-4 flex-wrap">
                   <SubmitButton label={data.cta} />
-                  <p className="text-xs text-neutral-600 leading-relaxed">
+                  <p className="text-xs text-c-dark-text-2 leading-relaxed">
                     Odpovídám zpravidla do 24 hodin.
                   </p>
                 </div>
@@ -169,12 +169,12 @@ export default function Contact({ data }: ContactProps) {
       </div>
 
       {/* Footer strip */}
-      <div className="container-content mt-20 pt-8 border-t border-white/10">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-neutral-600">
+      <div className="container-content mt-20 pt-8 border-t border-c-dark-border">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-c-dark-text-2">
           <span>© {new Date().getFullYear()} Daniel Klečka</span>
           <a
             href={`mailto:${data.email}`}
-            className="hover:text-neutral-400 transition-colors"
+            className="hover:text-c-dark-text transition-colors"
           >
             {data.email}
           </a>
