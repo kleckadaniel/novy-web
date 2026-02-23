@@ -4,14 +4,9 @@ interface ServicesProps {
   data: ContentData["services"];
 }
 
-function ServiceCard({ item, index }: { item: ServiceItem; index: number }) {
+function ServiceCard({ item }: { item: ServiceItem }) {
   return (
     <article className="group relative border border-c-border rounded-2xl p-7 md:p-8 bg-c-surface hover:border-c-text hover:shadow-lg transition-all duration-300">
-      {/* Index number */}
-      <span className="block text-xs font-medium text-c-text-3 mb-5 tabular-nums">
-        {String(index + 1).padStart(2, "0")}
-      </span>
-
       {/* Problem statement */}
       <p className="text-sm text-c-text-2 leading-relaxed mb-5 min-h-[3.5rem]">
         {item.problem}
@@ -47,23 +42,20 @@ export default function Services({ data }: ServicesProps) {
           <h2 className="font-display text-[clamp(2rem,5vw,3rem)] font-normal text-c-text leading-tight mb-4">
             {data.headline}
           </h2>
-          <p className="text-base md:text-lg text-c-text-2 leading-relaxed">
-            {data.intro}
-          </p>
+          <p
+            className="text-base md:text-lg text-c-text-2 leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: data.intro }}
+          />
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-          {data.items.map((item, i) => (
-            <ServiceCard key={item.solution} item={item} index={i} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+          {data.items.map((item) => (
+            <ServiceCard key={item.solution} item={item} />
           ))}
         </div>
 
-        {/* Bottom note */}
-        <p className="mt-10 text-sm text-c-text-3 text-center max-w-lg mx-auto leading-relaxed">
-          Výstupy se liší podle potřeby. Základ je vždy stejný —{" "}
-          <span className="text-c-text-2">strategie a správný nápad.</span>
-        </p>
+
       </div>
     </section>
   );
