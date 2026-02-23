@@ -17,47 +17,38 @@ const content: ContentData = {
   },
 
   services: {
-    headline: "Co pro vás vyřeším",
+    headline: "Bez nápadu vás stojí marketing víc, než by měl",
     intro:
-      "Každý projekt je jiný. Nenabízím šablony — hledám řešení, která sedí přímo vám.",
+      "<em>Nějak se to vymyslí</em> není strategie. Dobrý nápad šetří rozpočet a vytváří hodnotu.",
     items: [
       {
         problem:
-          "Nevíte, jak pojmenovat značku nebo produkt, aby to zaujalo a bylo zapamatovatelné.",
-        solution: "Naming & brand identity",
+          "Než začnete řešit formáty a kanály, potřebujete jasno v tom podstatném.",
+        solution: "Nevíte, co říct",
         outputs: [
-          "Název značky nebo produktu",
-          "Tagline a komunikační linie",
-          "Příběh značky",
+          "název, claim a tón komunikace",
+          "hlavní myšlenka kampaně",
+          "jasné vymezení značky",
         ],
       },
       {
         problem:
-          "Máte obsah, ale chybí vám červená nit — strategie, co říkat a jak.",
-        solution: "Obsahová strategie",
+          "Web ani sociální sítě samy o sobě nic nevyřeší. Bez myšlenky jen zesilují chaos.",
+        solution: "Řešíte kanály místo výsledku",
         outputs: [
-          "Obsahový plán a editorial",
-          "Komunikační manuál",
-          "Koncepty pro kampaně",
-        ],
-      },
-      {
-        problem: "Sociální sítě nestíháte nebo nevíte, co na ně psát.",
-        solution: "Social media koncepty",
-        outputs: [
-          "Sady Reels a obsahové koncepty",
-          "Copywriting pro příspěvky",
-          "Scénáře videí",
+          "weby a landing pages včetně struktury a UX",
+          "texty, které fungují",
+          "obsah, který drží pohromadě",
         ],
       },
       {
         problem:
-          "Web nebo landing page neprodává — texty jsou mdlé nebo nesrozumitelné.",
-        solution: "Webové texty & landing pages",
+          "I dobrá věc může zapadnout. Rozhoduje forma a způsob provedení.",
+        solution: "Nejste vidět",
         outputs: [
-          "Copywriting pro web",
-          "Textace landing pages",
-          "Struktury a architektura obsahu",
+          "video tvorba od scénáře po edit",
+          "AI content pro sociální sítě",
+          "vibe coding a prototyping",
         ],
       },
     ],
