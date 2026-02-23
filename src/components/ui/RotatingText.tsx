@@ -69,7 +69,7 @@ export default function RotatingText({ words }: RotatingTextProps) {
   // prefers-reduced-motion: show first word statically, no animation
   if (reduced) {
     return (
-      <span className="italic text-neutral-300">{words[0]}</span>
+      <span className="italic text-c-text-3">{words[0]}</span>
     );
   }
 
@@ -100,7 +100,7 @@ export default function RotatingText({ words }: RotatingTextProps) {
         aria-live="polite"
         aria-atomic="true"
         aria-describedby="rotating-word-hint"
-        className="italic text-neutral-300"
+        className="italic text-c-text-3"
         style={style}
       >
         {words[index]}

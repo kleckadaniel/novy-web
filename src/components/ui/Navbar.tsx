@@ -25,7 +25,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-sm border-b border-neutral-100 shadow-sm"
+          ? "bg-c-surface/95 backdrop-blur-sm border-b border-c-border shadow-sm"
           : "bg-transparent"
       }`}
     >
@@ -34,7 +34,7 @@ export default function Navbar() {
           {/* Logo / Name */}
           <a
             href="#"
-            className="text-sm font-medium tracking-wide text-neutral-900 hover:text-neutral-600 transition-colors"
+            className="text-sm font-medium tracking-wide text-c-text hover:text-c-text-2 transition-colors"
           >
             Daniel Klečka
           </a>
@@ -45,14 +45,14 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-neutral-500 hover:text-neutral-900 transition-colors"
+                className="text-sm text-c-text-2 hover:text-c-text transition-colors"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="#contact"
-              className="text-sm font-medium bg-neutral-900 text-white px-5 py-2.5 rounded-full hover:bg-neutral-700 transition-colors"
+              className="text-sm font-medium bg-c-text text-white px-5 py-2.5 rounded-full hover:bg-c-accent transition-colors"
             >
               Kontakt
             </a>
@@ -60,7 +60,7 @@ export default function Navbar() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 text-neutral-600 hover:text-neutral-900 transition-colors"
+            className="md:hidden p-2 text-c-text-2 hover:text-c-text transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Otevřít menu"
           >
@@ -87,7 +87,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden bg-white border-t border-neutral-100 transition-all duration-300 overflow-hidden ${
+        className={`md:hidden bg-c-surface border-t border-c-border transition-all duration-300 overflow-hidden ${
           menuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -97,7 +97,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={handleNavClick}
-              className="text-base text-neutral-600 hover:text-neutral-900 transition-colors"
+              className="text-base text-c-text-2 hover:text-c-text transition-colors"
             >
               {link.label}
             </a>
@@ -105,7 +105,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={handleNavClick}
-            className="inline-block w-fit text-sm font-medium bg-neutral-900 text-white px-6 py-3 rounded-full hover:bg-neutral-700 transition-colors"
+            className="inline-block w-fit text-sm font-medium bg-c-text text-white px-6 py-3 rounded-full hover:bg-c-accent transition-colors"
           >
             Kontakt
           </a>
