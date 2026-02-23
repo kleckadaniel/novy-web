@@ -1,3 +1,4 @@
+import "./globals.css";
 import type { Metadata } from "next";
 // Locally bundled fonts — no Google Fonts network request during build
 import "@fontsource/inter/300.css";
