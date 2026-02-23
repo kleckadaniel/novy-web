@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* ─── Theme tokens ─────────────────────────────────────────────── */
 :root {
@@ -9,11 +11,6 @@
   --color-text-muted: #737373;
   --color-border: #e5e5e5;
   --color-accent: #0f0f0f;
-}
-
-@theme inline {
-  --color-background: var(--color-bg);
-  --color-foreground: var(--color-text);
 }
 
 /* ─── Base reset & typography ──────────────────────────────────── */
