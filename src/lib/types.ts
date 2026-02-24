@@ -13,6 +13,7 @@ export interface Client {
   name: string;
   placeholder: boolean;
   logo?: string;
+  url?: string;
 }
 
 export interface Testimonial {
