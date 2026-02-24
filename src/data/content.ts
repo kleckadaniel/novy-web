@@ -109,8 +109,8 @@ const content: ContentData = {
   contact: {
     headline: "Začněme spolupracovat",
     subtext:
-      "Máte projekt, nebo jen myšlenku? Napište mi — rád si promluvíme o tom, jak vám mohu pomoci.",
-    email: "kleckadaniel@gmail.com",
+      "Od skvělého nápadu vás dělí jen jedna zpráva.",
+    email: "jsem@danielklecka.cz",
     cta: "Odeslat zprávu",
   },
 };
