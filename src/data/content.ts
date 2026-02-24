@@ -76,8 +76,8 @@ const content: ContentData = {
 
   about: {
     headline: "Daniel Klečka",
-    text: "Začínal jsem jako copywriter. Postupně jsem zjistil, že mě nejvíc baví část, která předchází psaní — přemýšlet, co říct a proč. Dnes pomáhám firmám a zakladatelům projektů najít ten jeden správný nápad, který pak otevírá všechno ostatní.",
-    note: "Pracuji s menšími značkami, ambiciózními projekty a lidmi, kteří chtějí komunikovat jinak než jejich konkurence.",
+    text: "Začínal jsem jako copywriter. Dnes řeším klíčové myšlenky, které určují směr marketingu a rozhodují o výsledku. Pomáhám firmám a zakladatelům projektů najít nápad, na kterém můžou stavět.",
+    note: "Pracuju se značkami, ambiciózními projekty a lidmi, kteří očekávají jasná rozhodnutí a měřitelný dopad.",
   },
 
   references: {
