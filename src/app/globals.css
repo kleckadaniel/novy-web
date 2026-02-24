@@ -148,7 +148,7 @@ body {
 /* ─── Hero photo ───────────────────────────────────────────────── */
 .hero-photo {
   position: absolute;
-  bottom: 0;
+  bottom: calc(-1 * clamp(20px, 3vw, 48px));
   right: clamp(16px, 6vw, 80px);
   z-index: 20;
   pointer-events: none;
@@ -159,17 +159,16 @@ body {
   display: block;
   width: clamp(220px, 38vw, 520px);
   height: auto;
-  transform: translateY(35%);
 }
 
 @media (max-width: 640px) {
   .hero-photo {
+    bottom: calc(-1 * clamp(14px, 3vw, 32px));
     right: 8px;
   }
 
   .hero-photo img {
     width: clamp(180px, 60vw, 320px);
-    transform: translateY(25%);
   }
 }
 
