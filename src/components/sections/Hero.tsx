@@ -7,7 +7,7 @@ interface HeroProps {
 
 export default function Hero({ data }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center bg-c-surface overflow-hidden">
+    <section className="relative z-[1] min-h-screen flex flex-col justify-center bg-c-surface">
       {/* Subtle dot-grid background */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.025]"
@@ -69,6 +69,17 @@ export default function Hero({ data }: HeroProps) {
             {data.secondaryCta}
           </a>
         </div>
+      </div>
+
+      {/* Hero photo — overflows into the next section */}
+      <div className="hero-photo" aria-hidden="true">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/fotka%20hero%20(1).png"
+          alt=""
+          aria-hidden="true"
+          style={{ pointerEvents: "none", userSelect: "none" }}
+        />
       </div>
     </section>
   );
