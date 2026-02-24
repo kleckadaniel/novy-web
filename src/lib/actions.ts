@@ -1,6 +1,6 @@
 "use server";
 
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 export interface ContactFormState {
   status: "idle" | "success" | "error";
@@ -11,9 +11,9 @@ export async function sendContactEmail(
   _prevState: ContactFormState,
   formData: FormData
 ): Promise<ContactFormState> {
-  const name = formData.get("name") as string;
-  const email = formData.get("email") as string;
-  const message = formData.get("message") as string;
+  const name = (formData.get("name") as string | null)?.trim() ?? "";
+  const email = (formData.get("email") as string | null)?.trim() ?? "";
+  const message = (formData.get("message") as string | null)?.trim() ?? "";
 
   if (!name || !email || !message) {
     return { status: "error", message: "Vyplňte prosím všechna povinná pole." };
@@ -24,47 +24,50 @@ export async function sendContactEmail(
     return { status: "error", message: "Zadejte prosím platnou e-mailovou adresu." };
   }
 
-  // In development (no SMTP env vars), log to console and return success.
-  // In production, configure the following environment variables in .env.local:
-  //   SMTP_HOST=smtp.gmail.com
-  //   SMTP_PORT=587
-  //   SMTP_USER=your-sender@gmail.com
-  //   SMTP_PASS=your-app-password   (generate at myaccount.google.com/apppasswords)
-  //   TO_EMAIL=kleckadaniel@gmail.com
-  if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
-    console.log("[Contact Form] Dev mode — email not sent. Payload:", {
-      name,
-      email,
-      message,
-    });
+  const RESEND_API_KEY = process.env.RESEND_API_KEY;
+  const TO_EMAIL = process.env.TO_EMAIL;
+  const FROM_EMAIL = process.env.FROM_EMAIL;
+
+  // Dev fallback: ať se nezasekneš lokálně, když env ještě nejsou nastavené
+  if (!RESEND_API_KEY || !TO_EMAIL || !FROM_EMAIL) {
+    if (process.env.NODE_ENV !== "production") {
+      console.log("[Contact Form] Dev mode - email not sent. Missing env:", {
+        RESEND_API_KEY: Boolean(RESEND_API_KEY),
+        TO_EMAIL: Boolean(TO_EMAIL),
+        FROM_EMAIL: Boolean(FROM_EMAIL),
+      });
+      console.log("[Contact Form] Payload:", { name, email, message });
+
+      return {
+        status: "success",
+        message: "Zpráva odeslána. Ozvu se vám co nejdříve.",
+      };
+    }
+
     return {
-      status: "success",
-      message: "Zpráva odeslána. Ozvu se vám co nejdříve.",
+      status: "error",
+      message: "Chybí nastavení odesílání e-mailu (RESEND).",
     };
   }
 
   try {
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT ?? 587),
-      secure: Number(process.env.SMTP_PORT) === 465,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
+    const resend = new Resend(RESEND_API_KEY);
 
-    await transporter.sendMail({
-      from: `"${name}" <${process.env.SMTP_USER}>`,
+    await resend.emails.send({
+      from: FROM_EMAIL,
+      to: TO_EMAIL,
+      subject: "Nová poptávka z webu danielklecka.cz",
       replyTo: email,
-      to: process.env.TO_EMAIL ?? "kleckadaniel@gmail.com",
-      subject: `Nová poptávka z webu danielklecka.cz`,
-      text: `Jméno: ${name}\nE-mail: ${email}\n\nZpráva:\n${message}`,
       html: `
-        <p><strong>Jméno:</strong> ${name}</p>
-        <p><strong>E-mail:</strong> <a href="mailto:${email}">${email}</a></p>
-        <hr />
-        <p>${message.replace(/\n/g, "<br />")}</p>
+        <div style="font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; line-height: 1.5;">
+          <h2 style="margin: 0 0 12px;">Nová poptávka z webu</h2>
+          <p style="margin: 0 0 8px;"><strong>Jméno:</strong> ${escapeHtml(name)}</p>
+          <p style="margin: 0 0 8px;"><strong>E-mail:</strong> ${escapeHtml(email)}</p>
+          <p style="margin: 12px 0 6px;"><strong>Zpráva:</strong></p>
+          <div style="white-space: pre-wrap; background: #f6f6f6; padding: 12px; border-radius: 8px;">
+            ${escapeHtml(message)}
+          </div>
+        </div>
       `,
     });
 
@@ -73,10 +76,21 @@ export async function sendContactEmail(
       message: "Zpráva odeslána. Ozvu se vám co nejdříve.",
     };
   } catch (err) {
-    console.error("[Contact Form] SMTP error:", err);
+    console.error("[Contact Form] Resend send error:", err);
+
     return {
       status: "error",
-      message: "Něco se pokazilo. Zkuste to prosím znovu nebo mi napište přímo na e-mail.",
+      message: "Nepodařilo se odeslat zprávu. Zkuste to prosím později.",
     };
   }
+}
+
+// Základní ochrana proti vložení HTML do mailu
+function escapeHtml(input: string) {
+  return input
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
 }
