@@ -58,7 +58,7 @@ export async function sendContactEmail(
       from: `"${name}" <${process.env.SMTP_USER}>`,
       replyTo: email,
       to: process.env.TO_EMAIL ?? "kleckadaniel@gmail.com",
-      subject: `Nová zpráva z webu od ${name}`,
+      subject: `Nová poptávka z webu danielklecka.cz`,
       text: `Jméno: ${name}\nE-mail: ${email}\n\nZpráva:\n${message}`,
       html: `
         <p><strong>Jméno:</strong> ${name}</p>
