@@ -14,7 +14,7 @@ import "@fontsource/playfair-display/600.css";
 export const metadata: Metadata = {
   title: "Daniel Klečka — Idea Maker",
   description:
-    "Pomáhám firmám a zakladatelům projektů komunikovat tak, aby to zaujalo a zafungovalo. Strategie, koncepty a obsah začínají u jedné správné myšlenky.",
+    "Pomáhám firmám a zakladatelům najít jasnou myšlenku, správná slova a funkční strukturu webu i kampaní. Copywriting, konzultace, obsah a prototypy.",
 };
 
 export default function RootLayout({
