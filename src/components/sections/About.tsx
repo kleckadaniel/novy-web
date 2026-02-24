@@ -7,7 +7,7 @@ interface AboutProps {
 
 export default function About({ data }: AboutProps) {
   return (
-    <section id="about" className="section-padding bg-c-bg">
+    <section id="o-mne" className="section-padding bg-c-bg">
       <div className="container-content">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text column */}
@@ -28,7 +28,7 @@ export default function About({ data }: AboutProps) {
 
             <div className="mt-10">
               <a
-                href="#contact"
+                href="#kontakt"
                 className="inline-flex items-center gap-2 text-sm font-medium text-c-text underline underline-offset-4 decoration-[rgba(15,61,62,0.35)] hover:text-c-accent hover:decoration-c-accent transition-colors"
               >
                 Napište mi

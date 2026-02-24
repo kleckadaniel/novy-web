@@ -45,7 +45,7 @@ export default function Contact({ data }: ContactProps) {
     "w-full bg-c-dark-surface border border-c-dark-border rounded-xl px-5 py-4 text-sm text-c-dark-text placeholder:text-c-dark-text-2 focus:outline-none focus:border-c-accent transition-colors";
 
   return (
-    <section id="contact" className="section-padding bg-c-dark-bg">
+    <section id="kontakt" className="section-padding bg-c-dark-bg">
       <div className="container-content">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20">
           {/* Left — headline & info */}

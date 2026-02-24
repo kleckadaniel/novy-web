@@ -47,7 +47,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 
 export default function References({ data }: ReferencesProps) {
   return (
-    <section id="references" className="section-padding bg-c-surface">
+    <section id="reference" className="section-padding bg-c-surface">
       <div className="container-content">
         {/* Header */}
         <div className="mb-12 md:mb-14 text-center max-w-xl mx-auto">

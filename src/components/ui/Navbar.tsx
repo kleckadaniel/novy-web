@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 
 const navLinks = [
-  { label: "Služby", href: "#services" },
-  { label: "Proč já", href: "#why-me" },
-  { label: "O mně", href: "#about" },
-  { label: "Reference", href: "#references" },
+  { label: "Služby", href: "#sluzby" },
+  { label: "Proč já", href: "#proc-ja" },
+  { label: "O mně", href: "#o-mne" },
+  { label: "Reference", href: "#reference" },
 ];
 
 export default function Navbar() {
@@ -51,7 +51,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="#kontakt"
               className="text-sm font-medium bg-c-text text-white px-5 py-2.5 rounded-full hover:bg-c-accent transition-colors"
             >
               Kontakt
@@ -103,7 +103,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="#kontakt"
             onClick={handleNavClick}
             className="inline-block w-fit text-sm font-medium bg-c-text text-white px-6 py-3 rounded-full hover:bg-c-accent transition-colors"
           >

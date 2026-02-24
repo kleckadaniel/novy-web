@@ -55,7 +55,7 @@ export default function Hero({ data }: HeroProps) {
         <div className="animate-fade-in-up animation-delay-400 mt-10 md:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4">
           {/* Primary — filled pill */}
           <a
-            href="#contact"
+            href="#kontakt"
             className="inline-flex items-center bg-c-text text-white text-sm font-medium px-7 py-3.5 rounded-full hover:bg-c-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-c-accent transition-colors"
           >
             {data.cta}
@@ -63,7 +63,7 @@ export default function Hero({ data }: HeroProps) {
 
           {/* Secondary — text link */}
           <a
-            href="#services"
+            href="#sluzby"
             className="text-sm text-c-text-2 hover:text-c-accent underline underline-offset-4 decoration-[rgba(15,61,62,0.35)] hover:decoration-c-accent transition-colors"
           >
             {data.secondaryCta}
