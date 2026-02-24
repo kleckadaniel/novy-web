@@ -7,18 +7,18 @@ interface ServicesProps {
 function ServiceCard({ item }: { item: ServiceItem }) {
   return (
     <article className="group relative border border-c-border rounded-2xl p-7 md:p-8 bg-c-surface hover:border-c-text hover:shadow-lg transition-all duration-300">
-      {/* Problem statement */}
-      <p className="text-sm text-c-text-2 leading-relaxed mb-5 min-h-[3.5rem]">
-        {item.problem}
-      </p>
-
-      {/* Divider */}
-      <div className="w-8 h-px bg-c-border mb-5" />
-
       {/* Solution label */}
       <h3 className="text-base font-medium text-c-text mb-5">
         {item.solution}
       </h3>
+
+      {/* Divider */}
+      <div className="w-8 h-px bg-c-border mb-5" />
+
+      {/* Problem statement */}
+      <p className="text-sm text-c-text-2 leading-relaxed mb-5 min-h-[3.5rem]">
+        {item.problem}
+      </p>
 
       {/* Outputs */}
       <ul className="flex flex-col gap-2">
