@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ContentData } from "@/lib/types";
 
 interface AboutProps {
@@ -52,28 +53,12 @@ export default function About({ data }: AboutProps) {
           {/* Photo column */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative w-full max-w-sm aspect-[3/4] rounded-2xl overflow-hidden bg-c-border">
-              {/*
-               * Replace this placeholder with a real <Image /> component when the photo is ready.
-               * Example:
-               *   import Image from "next/image";
-               *   <Image src="/photos/daniel.jpg" alt="Daniel Klečka" fill className="object-cover" />
-               */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-c-text-3">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="8" r="4" />
-                  <path d="M4 20c0-4 3.582-7 8-7s8 3 8 7" />
-                </svg>
-                <span className="text-xs tracking-wider uppercase">Fotografie</span>
-              </div>
+              <Image
+                src="/daniel klecka foto.png"
+                alt="Daniel Klečka"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
