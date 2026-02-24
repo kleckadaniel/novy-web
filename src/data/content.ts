@@ -23,7 +23,7 @@ const content: ContentData = {
     items: [
       {
         problem:
-          "Než začnete řešit formáty a kanály, potřebujete jasno v tom podstatném.",
+          "Než začnete vybírat formáty a kanály, potřebujete jasno v tom podstatném.",
         solution: "Nevíte, co říct",
         outputs: [
           "název, claim a tón komunikace",
@@ -33,7 +33,7 @@ const content: ContentData = {
       },
       {
         problem:
-          "Web ani sociální sítě samy o sobě nic nevyřeší. Bez myšlenky jen zesilují chaos.",
+          "Web ani sociální sítě nejsou samospásné. Bez myšlenky jen zesilují chaos.",
         solution: "Řešíte kanály místo výsledku",
         outputs: [
           "weby a landing pages včetně struktury a UX",
@@ -55,29 +55,29 @@ const content: ContentData = {
   },
 
   whyMe: {
-    headline: "Proč se mnou",
+    headline: "Jak přemýšlím nad marketingem",
     intro:
-      "Nejsem copywriter, který čeká na brief. Přicházím s nápady a strategií.",
+      "Nečekám na brief. Přicházím s myšlenkou, vím, kde začít, a navrhuju konkrétní kroky.",
     points: [
       {
-        title: "Nápad jako základ",
-        text: "Každý projekt začíná u klíčové myšlenky. Forma přijde pak — ať je to video, slogan nebo celá kampaň.",
+        title: "Nápad je základ",
+        text: "Každý projekt stojí na jedné klíčové myšlence. Forma ji má zesílit, ne nahradit.",
       },
       {
-        title: "Strategie a kreativa v jednom",
-        text: "Nevymýšlím věci, které vypadají dobře jen v prezentaci. Hledám to, co funguje v realitě a přináší výsledky.",
+        title: "Opírám se o data",
+        text: "Rozhoduju se podle dat, ne podle pocitu. Kreativitu testuju v realitě, ne v prezentaci.",
       },
       {
-        title: "AI jako spolupracovník",
-        text: "Umělou inteligenci používám jako nástroj, který zrychluje práci. Nápad, úsudek a odpovědnost za výsledek zůstávají na mně.",
+        title: "AI powered kreativec",
+        text: "S AI jsem rychlý, všestranný a efektivní. Ideu a odpovědnost za výsledek beru na sebe.",
       },
     ],
   },
 
   about: {
     headline: "Daniel Klečka",
-    text: "Začínal jsem jako copywriter. Postupně jsem zjistil, že mě nejvíc baví část, která předchází psaní — přemýšlet, co říct a proč. Dnes pomáhám firmám a zakladatelům projektů najít ten jeden správný nápad, který pak otevírá všechno ostatní.",
-    note: "Pracuji s menšími značkami, ambiciózními projekty a lidmi, kteří chtějí komunikovat jinak než jejich konkurence.",
+    text: "Začínal jsem jako copywriter. Dnes řeším klíčové myšlenky, které určují směr marketingu a rozhodují o výsledku. Pomáhám firmám a zakladatelům projektů najít nápad, na kterém můžou stavět.",
+    note: "Pracuju se značkami, ambiciózními projekty a lidmi, kteří očekávají jasná rozhodnutí a měřitelný dopad.",
   },
 
   references: {
