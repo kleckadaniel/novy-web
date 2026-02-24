@@ -23,12 +23,19 @@ export default function LogoMarquee({ clients }: LogoMarqueeProps) {
             className="flex-shrink-0 mx-10 flex items-center justify-center"
           >
             {client.logo ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={client.logo}
-                alt={client.name}
-                className="h-8 w-auto object-contain grayscale opacity-50 hover:opacity-80 transition-opacity"
-              />
+              <a
+                href={client.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={client.name}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="h-36 w-auto object-contain grayscale opacity-50 hover:opacity-80 transition-opacity"
+                />
+              </a>
             ) : (
               /* Placeholder: replace with real logo when available */
               <div className="h-8 px-6 flex items-center justify-center border border-c-border rounded-md bg-c-bg">

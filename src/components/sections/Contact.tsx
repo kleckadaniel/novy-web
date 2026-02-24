@@ -159,7 +159,7 @@ export default function Contact({ data }: ContactProps) {
                 <div className="flex items-center justify-between gap-4 flex-wrap">
                   <SubmitButton label={data.cta} />
                   <p className="text-xs text-c-dark-text-2 leading-relaxed">
-                    Odpovídám zpravidla do 24 hodin.
+                    Odpovím vám do druhého pracovního dne.
                   </p>
                 </div>
               </form>

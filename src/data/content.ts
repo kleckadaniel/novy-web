@@ -83,14 +83,14 @@ const content: ContentData = {
   references: {
     headline: "Důvěřují mi",
     clients: [
-      { name: "Klient 1", placeholder: true },
-      { name: "Klient 2", placeholder: true },
-      { name: "Klient 3", placeholder: true },
-      { name: "Klient 4", placeholder: true },
-      { name: "Klient 5", placeholder: true },
-      { name: "Klient 6", placeholder: true },
-      { name: "Klient 7", placeholder: true },
-      { name: "Klient 8", placeholder: true },
+      { name: "Švihej", placeholder: false, logo: "/loga web/1.png", url: "https://www.svihej.cz/" },
+      { name: "MeetDeal", placeholder: false, logo: "/loga web/2.png", url: "https://www.meetdeal.cz/" },
+      { name: "ProIdea Digital", placeholder: false, logo: "/loga web/3.png", url: "https://proidea.digital/" },
+      { name: "TSR", placeholder: false, logo: "/loga web/4.png", url: "https://www.tsr.cz/" },
+      { name: "Vanila", placeholder: false, logo: "/loga web/5.png", url: "https://vanila.cz/" },
+      { name: "Všeruby", placeholder: false, logo: "/loga web/6.png", url: "https://www.vseruby-mesto.cz/" },
+      { name: "Softlabs", placeholder: false, logo: "/loga web/7.png", url: "https://softlabs.cz/" },
+      { name: "Realitní dvojka", placeholder: false, logo: "/loga web/8.png", url: "https://www.instagram.com/realitnidvojka/" },
     ],
     testimonials: [
       {
@@ -109,8 +109,8 @@ const content: ContentData = {
   contact: {
     headline: "Začněme spolupracovat",
     subtext:
-      "Máte projekt, nebo jen myšlenku? Napište mi — rád si promluvíme o tom, jak vám mohu pomoci.",
-    email: "kleckadaniel@gmail.com",
+      "Od skvělého nápadu vás dělí jen jedna zpráva.",
+    email: "jsem@danielklecka.cz",
     cta: "Odeslat zprávu",
   },
 };
