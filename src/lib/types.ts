@@ -48,6 +48,7 @@ export interface ContentData {
   };
   references: {
     headline: string;
+    subtext: string;
     clients: Client[];
     testimonials: Testimonial[];
   };
