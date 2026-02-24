@@ -20,6 +20,8 @@ export interface Testimonial {
   text: string;
   author: string;
   company: string;
+  companyUrl?: string;
+  image?: string;
 }
 
 export interface ContentData {

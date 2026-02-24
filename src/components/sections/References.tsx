@@ -1,3 +1,4 @@
+import Image from "next/image";
 import LogoMarquee from "@/components/ui/LogoMarquee";
 import type { ContentData, Testimonial } from "@/lib/types";
 
@@ -21,24 +22,45 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
       </p>
 
       <footer className="flex items-center gap-3 mt-auto pt-4 border-t border-c-border">
-        {/* Avatar placeholder */}
-        <div className="w-9 h-9 rounded-full bg-c-bg flex items-center justify-center flex-shrink-0">
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            className="text-c-text-3"
-          >
-            <circle cx="12" cy="8" r="4" />
-            <path d="M4 20c0-4 3.582-7 8-7s8 3 8 7" />
-          </svg>
+        {/* Avatar */}
+        <div className="w-9 h-9 rounded-full bg-c-bg flex items-center justify-center flex-shrink-0 overflow-hidden">
+          {testimonial.image ? (
+            <Image
+              src={testimonial.image}
+              alt={testimonial.author}
+              width={36}
+              height={36}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              className="text-c-text-3"
+            >
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 20c0-4 3.582-7 8-7s8 3 8 7" />
+            </svg>
+          )}
         </div>
         <div>
           <p className="text-sm font-medium text-c-text">{testimonial.author}</p>
-          <p className="text-xs text-c-text-3">{testimonial.company}</p>
+          {testimonial.companyUrl ? (
+            <a
+              href={testimonial.companyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-c-text-3 hover:text-c-text transition-colors"
+            >
+              {testimonial.company}
+            </a>
+          ) : (
+            <p className="text-xs text-c-text-3">{testimonial.company}</p>
+          )}
         </div>
       </footer>
     </blockquote>
