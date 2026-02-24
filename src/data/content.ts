@@ -69,7 +69,7 @@ const content: ContentData = {
       },
       {
         title: "AI powered kreativec",
-        text: "AI používám pro rychlost a testování. Myšlení, úsudek a odpovědnost za výsledek beru na sebe.",
+        text: "S AI jsem rychlý, všestranný a efektivní. Ideu a odpovědnost za výsledek beru na sebe.",
       },
     ],
   },
