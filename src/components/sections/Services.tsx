@@ -35,7 +35,7 @@ function ServiceCard({ item }: { item: ServiceItem }) {
 
 export default function Services({ data }: ServicesProps) {
   return (
-    <section id="services" className="section-padding bg-c-bg">
+    <section id="sluzby" className="section-padding bg-c-bg">
       <div className="container-content">
         {/* Header */}
         <div className="mb-14 md:mb-16 max-w-2xl">

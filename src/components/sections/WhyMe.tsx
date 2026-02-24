@@ -55,7 +55,7 @@ function WhyMeCard({
 
 export default function WhyMe({ data }: WhyMeProps) {
   return (
-    <section id="why-me" className="section-padding bg-c-surface">
+    <section id="proc-ja" className="section-padding bg-c-surface">
       <div className="container-content">
         {/* Header */}
         <div className="mb-14 md:mb-16 max-w-xl">
