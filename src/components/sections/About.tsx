@@ -26,28 +26,7 @@ export default function About({ data }: AboutProps) {
               </p>
             </div>
 
-            <div className="mt-10 flex items-center gap-6 flex-wrap">
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 text-sm font-medium text-c-text underline underline-offset-4 decoration-[rgba(15,61,62,0.35)] hover:text-c-accent hover:decoration-c-accent transition-colors"
-              >
-                Napište mi
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                >
-                  <path
-                    d="M1 7h12M8 2l5 5-5 5"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </a>
-
+            <div className="mt-10 flex flex-col gap-4">
               <div className="flex items-center gap-4">
                 <a
                   href="https://www.linkedin.com/in/daniel-klecka/"
@@ -76,6 +55,27 @@ export default function About({ data }: AboutProps) {
                   </svg>
                 </a>
               </div>
+
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 text-sm font-medium text-c-text underline underline-offset-4 decoration-[rgba(15,61,62,0.35)] hover:text-c-accent hover:decoration-c-accent transition-colors"
+              >
+                Napište mi
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                >
+                  <path
+                    d="M1 7h12M8 2l5 5-5 5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
 
