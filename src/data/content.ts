@@ -55,21 +55,21 @@ const content: ContentData = {
   },
 
   whyMe: {
-    headline: "Proč se mnou",
+    headline: "Jak přemýšlím nad marketingem",
     intro:
-      "Nejsem copywriter, který čeká na brief. Přicházím s nápady a strategií.",
+      "Nečekám na brief. Přicházím s myšlenkou, vím, kde začít, a navrhuju konkrétní kroky.",
     points: [
       {
-        title: "Nápad jako základ",
-        text: "Každý projekt začíná u klíčové myšlenky. Forma přijde pak — ať je to video, slogan nebo celá kampaň.",
+        title: "Nápad je základ",
+        text: "Každý projekt stojí na jedné klíčové myšlence. Forma ji má zesílit, ne nahradit.",
       },
       {
-        title: "Strategie a kreativa v jednom",
-        text: "Nevymýšlím věci, které vypadají dobře jen v prezentaci. Hledám to, co funguje v realitě a přináší výsledky.",
+        title: "Opírám se o data",
+        text: "Rozhoduju se podle dat, ne podle pocitu. Kreativitu testuju v realitě, ne v prezentaci.",
       },
       {
-        title: "AI jako spolupracovník",
-        text: "Umělou inteligenci používám jako nástroj, který zrychluje práci. Nápad, úsudek a odpovědnost za výsledek zůstávají na mně.",
+        title: "AI powered kreativec",
+        text: "AI používám pro rychlost a testování. Myšlení, úsudek a odpovědnost za výsledek beru na sebe.",
       },
     ],
   },
