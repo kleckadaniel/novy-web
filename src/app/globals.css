@@ -24,6 +24,10 @@
   --btn-primary-bg:  var(--text);
   --btn-primary-hov: var(--accent);
   --btn-primary-txt: #FFFFFF;
+
+  /* Hero photo fine-tuning */
+  --hero-photo-nudge-desktop: -26px;
+  --hero-photo-nudge-mobile:  -25px;
 }
 
 /* ─── Base reset & typography ──────────────────────────────────── */
@@ -143,6 +147,33 @@ body {
 /* ─── Display font (headlines) ─────────────────────────────────── */
 .font-display {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+/* ─── Hero photo ───────────────────────────────────────────────── */
+.hero-photo {
+  position: absolute;
+  bottom: calc(-1 * clamp(20px, 3vw, 48px) + var(--hero-photo-nudge-desktop));
+  right: clamp(16px, 6vw, 80px);
+  z-index: 20;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-photo img {
+  display: block;
+  width: clamp(220px, 38vw, 520px);
+  height: auto;
+}
+
+@media (max-width: 640px) {
+  .hero-photo {
+    bottom: calc(-1 * clamp(14px, 3vw, 32px) + var(--hero-photo-nudge-mobile));
+    right: 8px;
+  }
+
+  .hero-photo img {
+    width: clamp(180px, 60vw, 320px);
+  }
 }
 
 /* ─── Underline accent ─────────────────────────────────────────── */
