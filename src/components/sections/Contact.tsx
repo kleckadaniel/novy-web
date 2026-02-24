@@ -201,6 +201,7 @@ export default function Contact({ data }: ContactProps) {
       <div className="container-content mt-20 pt-8 border-t border-c-dark-border">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-c-dark-text-2">
           <span>© {new Date().getFullYear()} Daniel Klečka</span>
+          <span>IČO: 03258912</span>
           <a
             href={`mailto:${data.email}`}
             className="hover:text-c-dark-text transition-colors"
