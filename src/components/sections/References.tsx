@@ -74,9 +74,6 @@ export default function References({ data }: ReferencesProps) {
             ))}
           </div>
 
-          <p className="mt-8 text-center text-xs text-c-text-3 tracking-wide uppercase">
-            Placeholder reference — nahradit reálnými citáty od klientů
-          </p>
         </div>
       )}
     </section>
