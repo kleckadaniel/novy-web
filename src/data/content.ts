@@ -23,7 +23,7 @@ const content: ContentData = {
     items: [
       {
         problem:
-          "Než začnete řešit formáty a kanály, potřebujete jasno v tom podstatném.",
+          "Než začnete vybírat formáty a kanály, potřebujete jasno v tom podstatném.",
         solution: "Nevíte, co říct",
         outputs: [
           "název, claim a tón komunikace",
@@ -33,7 +33,7 @@ const content: ContentData = {
       },
       {
         problem:
-          "Web ani sociální sítě samy o sobě nic nevyřeší. Bez myšlenky jen zesilují chaos.",
+          "Web ani sociální sítě nejsou samospásné. Bez myšlenky jen zesilují chaos.",
         solution: "Řešíte kanály místo výsledku",
         outputs: [
           "weby a landing pages včetně struktury a UX",
