@@ -95,9 +95,11 @@ const content: ContentData = {
     ],
     testimonials: [
       {
-        text: "Sem přijde citát od klienta, který vystihne spolupráci a výsledky, které jsme společně dosáhli. Konkrétní, autentický a stručný.",
-        author: "Jméno Příjmení",
-        company: "Název firmy",
+        text: "S Danem spolupracujeme řadu let v rámci Meet&Deal i dalších mých projektů. Cením jeho mezioborový přesah, schopnost přemýšlet strategicky, přinášet nové nápady a zároveň řešit věci rychle. Jsem rád, že se na něj můžu dlouhodobě spolehnout.",
+        author: "André Kohout",
+        company: "Meet&Deal",
+        companyUrl: "https://www.meetdeal.cz/",
+        image: "/andre.png",
       },
       {
         text: "Druhý citát od dalšího spokojeného klienta. Sem patří reálný příběh spolupráce a konkrétní přínos pro byznys.",
