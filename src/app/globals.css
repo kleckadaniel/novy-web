@@ -26,8 +26,8 @@
   --btn-primary-txt: #FFFFFF;
 
   /* Hero photo fine-tuning */
-  --hero-photo-nudge-desktop: -18px;
-  --hero-photo-nudge-mobile:  -14px;
+  --hero-photo-nudge-desktop: -26px;
+  --hero-photo-nudge-mobile:  -20px;
 }
 
 /* ─── Base reset & typography ──────────────────────────────────── */
