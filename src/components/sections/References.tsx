@@ -54,6 +54,9 @@ export default function References({ data }: ReferencesProps) {
           <h2 className="font-display text-[clamp(2rem,5vw,3rem)] font-normal text-c-text leading-tight">
             {data.headline}
           </h2>
+          <p className="mt-4 text-base text-c-text-2 leading-relaxed">
+            {data.subtext}
+          </p>
         </div>
       </div>
 

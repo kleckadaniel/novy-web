@@ -81,7 +81,8 @@ const content: ContentData = {
   },
 
   references: {
-    headline: "Důvěřují mi",
+    headline: "Nápady s opravdovým dopadem",
+    subtext: "Na značky, kampaně i byznys.",
     clients: [
       { name: "Švihej", placeholder: false, logo: "/loga web/1.png", url: "https://www.svihej.cz/" },
       { name: "MeetDeal", placeholder: false, logo: "/loga web/2.png", url: "https://www.meetdeal.cz/" },
