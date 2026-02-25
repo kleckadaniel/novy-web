@@ -7,7 +7,7 @@ const content: ContentData = {
     rotatingWords: [
       "úspěšné kampaně",
       "virálního videa",
-      "zapamatovatelného názvu",
+      "silného názvu",
       "obsahu, co funguje",
       "značky, která je vidět",
     ],
