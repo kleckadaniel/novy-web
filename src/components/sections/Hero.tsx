@@ -64,7 +64,7 @@ export default function Hero({ data }: HeroProps) {
           {/* Secondary — text link */}
           <a
             href="#sluzby"
-            className="text-sm text-c-text-2 hover:text-c-accent underline underline-offset-4 decoration-[rgba(15,61,62,0.35)] hover:decoration-c-accent transition-colors"
+            className="pl-7 sm:pl-0 text-sm text-c-text-2 hover:text-c-accent underline underline-offset-4 decoration-[rgba(15,61,62,0.35)] hover:decoration-c-accent transition-colors"
           >
             {data.secondaryCta}
           </a>
