@@ -33,7 +33,7 @@ export default function LogoMarquee({ clients }: LogoMarqueeProps) {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-36 w-auto object-contain grayscale opacity-50 hover:opacity-80 transition-opacity"
+                  className="h-36 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                 />
               </a>
             ) : (
