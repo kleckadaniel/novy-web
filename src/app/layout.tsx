@@ -10,6 +10,7 @@ import "@fontsource/playfair-display/400-italic.css";
 import "@fontsource/playfair-display/500.css";
 import "@fontsource/playfair-display/500-italic.css";
 import "@fontsource/playfair-display/600.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Daniel Klečka — Idea Maker",
@@ -26,6 +27,7 @@ export default function RootLayout({
     <html lang="cs">
       <body className="antialiased">
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
