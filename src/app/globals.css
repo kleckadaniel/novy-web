@@ -101,6 +101,12 @@ body {
   will-change: transform;
 }
 
+@media (max-width: 768px) {
+  .animate-marquee {
+    animation-duration: 20s;
+  }
+}
+
 .animate-fade-in-up {
   animation: fade-in-up 0.7s ease-out both;
 }
